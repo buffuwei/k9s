@@ -236,9 +236,19 @@ func hydrate(o runtime.Object, cc ColumnSpecs, parsers []*jsonpath.JSONPath, rh 
 				values = append(values, strVal)
 			}
 		}
+
+		colValue := strings.Join(values, ",")
+
+		// clumsy way to extract the image tag
+		if cc[idx].Header.Name == "IMAGE_TAG" && len(values) == 1 {
+			if idx := strings.LastIndex(values[0], ":"); idx != -1 {
+				colValue = values[0][idx+1:]
+			}
+		}
+
 		cols[idx] = RenderedCol{
 			Header: cc[idx].Header,
-			Value:  strings.Join(values, ","),
+			Value:  colValue,
 		}
 	}
 

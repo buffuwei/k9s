@@ -83,6 +83,8 @@ func parse(s string) (colDef, error) {
 		spec, err := get.RelaxedJSONPathExpression(mm[2])
 		if err != nil {
 			return colDef{idx: -1}, err
+		} else {
+			slog.Info("Column spec : ", s, spec)
 		}
 		return colDef{
 			name:     mm[1],

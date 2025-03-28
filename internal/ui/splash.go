@@ -18,7 +18,7 @@ var LogoSmall = []string{
 	`|       /\____    /  ___/`,
 	`|    \   \  /    /\___  \`,
 	`|____|\__ \/____//____  /`,
-	`         \/           \/ `,
+	`         \/           \/     A fork by buffuwei`,
 }
 
 // LogoBig K9s big logo for splash page.
@@ -28,7 +28,7 @@ var LogoBig = []string{
 	`|       /\____    /  ___/    \  \/|    |   |   |`,
 	`|    \   \  /    /\___  \     \___|    |___|   |`,
 	`|____|\__ \/____//____  /\______  /_______ \___|`,
-	`         \/           \/        \/        \/    `,
+	`         \/           \/        \/        \/        A fork by buffuwei`,
 }
 
 // Splash represents a splash screen.
